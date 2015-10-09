@@ -1,0 +1,36 @@
+Fitting Line
+========================================================
+author: Zhangyj
+date: 10/9/2015
+
+
+Generating Data 
+========================================================
+The Data was generating by a linear function and normal distribution
+```{r}
+x <-c(1:100)
+y <- 20*x+rnorm(100,mean=0,sd=50)+100
+summary(y)
+summary(x)
+```
+
+The Fintting Line
+========================================================
+
+```{r, echo=FALSE}
+par(mfrow=c(2,2))
+plot(lm(y~x))
+```
+
+The Parameters and residuals of Fintting Line
+========================================================
+
+```{r, echo=FALSE}
+f<- lm(y~x)
+f$coefficients
+mean(f$residuals)
+```
+               
+                Thanks for Review
+========================================================
+
